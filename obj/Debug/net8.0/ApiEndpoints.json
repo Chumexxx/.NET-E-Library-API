@@ -65,32 +65,6 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.AuthorController",
-    "Method": "GetAllAuthors",
-    "RelativePath": "api/Authors",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ModernLibrary.Controllers.AuthorController",
-    "Method": "Create",
-    "RelativePath": "api/Authors",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "authorDto",
-        "Type": "ModernLibrary.DTOs.Author.CreateAuthorRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ModernLibrary.Controllers.AuthorController",
     "Method": "GetById",
     "RelativePath": "api/Authors/{id}",
     "HttpMethod": "GET",
@@ -140,6 +114,32 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModernLibrary.Controllers.AuthorController",
+    "Method": "Create",
+    "RelativePath": "api/Authors/addAuthor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authorDto",
+        "Type": "ModernLibrary.DTOs.Author.CreateAuthorRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModernLibrary.Controllers.AuthorController",
+    "Method": "GetAllAuthors",
+    "RelativePath": "api/Authors/getAllAuthors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

@@ -13,7 +13,7 @@ namespace ModernLibrary.DTOs.BorrowingRecord
         public bool IsReturned { get; set; }
         public bool IsCancelled { get; set; }
         public bool IsOverdue { get; set; }
-        public int OverdueDays { get; set; }
+        //public int OverdueDays { get; set; }
         public ICollection<BorrowedBookDto> BorrowedBook { get; set; }
     }
 }

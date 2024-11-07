@@ -18,7 +18,6 @@ namespace ModernLibrary.Mappers
                 IsReturned = borrowingRecordModel.IsReturned,
                 IsCancelled = borrowingRecordModel.IsCancelled,
                 IsOverdue = borrowingRecordModel.IsOverdue,
-                OverdueDays = borrowingRecordModel.OverdueDays,
                 BorrowedBook = borrowingRecordModel.BorrowedBooks.Select(b => b.ToBorrowedBookDto()).ToList(),
             };
         }
@@ -31,13 +30,5 @@ namespace ModernLibrary.Mappers
             };
         }
 
-        //public static BorrowingRecord ToBorrowingRecordFromReturn(this ReturnBorrowingRecordRequestDto recordDto)
-        //{
-        //    return new BorrowingRecord
-        //    {
-        //        IsReturned = true,
-        //        ReturnDate = DateTime.Now,
-        //    };
-        //}
     }
 }

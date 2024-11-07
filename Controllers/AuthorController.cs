@@ -19,7 +19,7 @@ namespace ModernLibrary.Controllers
             _bookRepo = bookRepo;
         }
 
-        [HttpGet]
+        [HttpGet("getAllAuthors")]
         [Authorize(Roles = "Customer, SuperAdmin, Admin")]
         public async Task<ActionResult> GetAllAuthors()
         {
@@ -49,7 +49,7 @@ namespace ModernLibrary.Controllers
             return Ok(author.ToAuthorDto());
         }
 
-        [HttpPost]
+        [HttpPost("addAuthor")]
         [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Create([FromBody] CreateAuthorRequestDto authorDto)
         {

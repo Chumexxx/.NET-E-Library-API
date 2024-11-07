@@ -183,9 +183,6 @@ namespace ModernLibrary.Controllers
                     AppUserId = appUser.Id,
                     BorrowedBy = appUser.UserName,
                     BorrowedBooks = borrowedBooks,
-                    //DueDate = DateTime.Now.AddDays(60),
-                    //IsReturned = false,
-                    //IsCancelled = false
                 };
 
                 await _borrowingRecordRepo.CreateBorrowingRecordAsync(recordModel);
