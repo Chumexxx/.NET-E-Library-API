@@ -23,6 +23,7 @@ namespace ModernLibrary.DTOs.Account
         [Required]
         public string Password { get; set; } = string.Empty;
         [Required]
+        [Compare("Password", ErrorMessage = "Passwords don't match. Please try again.")]
         public string PasswordComfirmation { get; set; } = string.Empty;
     }
 }

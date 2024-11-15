@@ -15,7 +15,7 @@ namespace ModernLibrary.DTOs.Book
         [Required]
         public string AuthorName { get; set; } = string.Empty;
         [Required]
-        public DateTime? PublishDate { get; set; }
+        public DateTime? PublishDate { get; set; } = DateTime.Now;
         [Required]
         public string Publisher { get; set; } = string.Empty;
         [Required]

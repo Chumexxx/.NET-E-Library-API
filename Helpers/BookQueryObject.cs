@@ -1,6 +1,6 @@
 ﻿namespace ModernLibrary.Helpers
 {
-    public class QueryObject
+    public class BookQueryObject
     {
         public string? BookName { get; set; } = null;
         public string? AuthorName { get; set; } = null;

@@ -10,7 +10,7 @@
         public int AuthorId { get; set; }
         public string AuthorName { get; set; } = string.Empty;
         public string Publisher { get; set; } = string.Empty;
-        public DateTime? PublishDate { get; set; }
+        public DateTime? PublishDate { get; set; } = DateTime.Now;
         public int NumofBooksAvailable { get; set; }
     }
 }

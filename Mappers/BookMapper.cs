@@ -43,7 +43,6 @@ namespace ModernLibrary.Mappers
             {
                 BookName = bookDto.BookName,
                 Genre = bookDto.Genre,
-                AuthorId = bookDto.AuthorId,
                 Synopsis = bookDto.Synopsis,
                 Publisher = bookDto.Publisher,
                 PublishDate = bookDto.PublishDate,

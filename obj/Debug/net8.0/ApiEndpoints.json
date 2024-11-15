@@ -49,6 +49,22 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.AccountController",
+    "Method": "StaffRegister",
+    "RelativePath": "api/Account/registerStaff",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "staffRegisterDto",
+        "Type": "ModernLibrary.DTOs.Account.StaffRegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModernLibrary.Controllers.AccountController",
     "Method": "SuperAdminRegister",
     "RelativePath": "api/Account/registerSuperAdmin",
     "HttpMethod": "POST",

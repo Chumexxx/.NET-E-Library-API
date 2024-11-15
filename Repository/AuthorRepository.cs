@@ -16,6 +16,12 @@ namespace ModernLibrary.Repository
 
         public async Task<Author> CreateAsync(Author authorModel)
         {
+            var existingAuthor = await _context.Author.FirstOrDefaultAsync(x => x.AuthorName == authorModel.AuthorName);
+
+            if (existingAuthor != null)
+            {
+                return null;
+            }
             await _context.Author.AddAsync(authorModel);
             await _context.SaveChangesAsync();
             return authorModel;
@@ -44,6 +50,11 @@ namespace ModernLibrary.Repository
         public async Task<Author?> GetByIdAsync(int id)
         {
             return await _context.Author.Include(c => c.Books).FirstOrDefaultAsync(a => a.AuthorId == id);
+        }
+
+        public async Task<Author?> GetByNameAsync(string name)
+        {
+            return await _context.Author.FirstOrDefaultAsync(t => t.AuthorName == name);
         }
 
         public async Task<Author> UpdateAsync(int id, UpdateAuthorRequestDto authorDto)

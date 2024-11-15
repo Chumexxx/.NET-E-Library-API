@@ -36,12 +36,9 @@ namespace ModernLibrary.Controllers
         }
 
         [HttpGet("getAllBorrowingRecords")]
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> GetAllBorrowingRecords()
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             var borrowingRecords = await _borrowingRecordRepo.GetAllBorrowingRecordAsync();
 
             var borrowingRecordDto = borrowingRecords.Select(s => s.ToBorrowingRecordDto());
@@ -51,13 +48,9 @@ namespace ModernLibrary.Controllers
 
 
         [HttpGet("getBorrowingRecord")]
-        [Authorize(Roles = "Customer, SuperAdmin, Admin")]
+        [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> GetUserBorrowingRecord()
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-
             var username = User.GetUsername();
 
             var appUser = await _userManager.FindByNameAsync(username);
@@ -70,15 +63,13 @@ namespace ModernLibrary.Controllers
         }
 
         [HttpGet("{id:int}")]
-        [Authorize(Roles = "Customer, SuperAdmin, Admin")]
+        [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> GetBorrowingRecordById([FromRoute] int id)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             var username = User.GetUsername();
 
             var appUser = await _userManager.FindByNameAsync(username);
+
             if (appUser == null)
                 return NotFound("User not found");
 
@@ -87,14 +78,13 @@ namespace ModernLibrary.Controllers
             if (userBorrowingRecord == null)
                 return NotFound($"No BorrowRequest found for the user with ID {id}");
 
-
             return Ok(userBorrowingRecord.ToBorrowingRecordDto());
 
         }
 
 
         [HttpPost("makeBorrowRequest")]
-        [Authorize(Roles = "Customer, SuperAdmin, Admin")]
+        [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> MakeBorrowRequest([FromBody] CreateBorrowingRecordRequestDto recordDto)
         {
             if (!ModelState.IsValid)
@@ -102,13 +92,45 @@ namespace ModernLibrary.Controllers
 
             var username = User.GetUsername();
             var appUser = await _userManager.FindByNameAsync(username);
+
             if (appUser == null)
                 return NotFound("User not found");
 
-            var borrowedBooks = new List<BorrowedBook>();
-            var errorMessages = new List<string>();
+            if (recordDto.Books.Count > 2)
+            {
+                return BadRequest(new
+                {
+                    Message = "You cannot borrow more than 2 books at once."
+                });
+            }
 
+            var numOfBooksBorrowed = await _context.BorrowingRecords
+                .Include(br => br.BorrowedBooks)
+                .Where(br => br.AppUserId == appUser.Id && !br.IsReturned && !br.IsCancelled)
+                .SelectMany(br => br.BorrowedBooks)
+                .CountAsync();
+
+            var remainingBorrowLimit = 2 - numOfBooksBorrowed;
+
+            if (remainingBorrowLimit <= 0)
+            {
+                return BadRequest(new
+                {
+                    Message = "You have reached your maximum borrow limit of 2 books. Please return some books before borrowing more."
+                });
+            }
+
+            if (recordDto.Books.Count > remainingBorrowLimit)
+            {
+                return BadRequest(new
+                {
+                    Message = $"You can only borrow {remainingBorrowLimit} more book(s) at this time. You currently have {numOfBooksBorrowed} book(s) borrowed."
+                });
+            }
+
+            var borrowedBooks = new List<BorrowedBook>();
             var borrowingBook = await _context.Database.BeginTransactionAsync();
+
             try
             {
                 foreach (var bookRequest in recordDto.Books)
@@ -117,22 +139,32 @@ namespace ModernLibrary.Controllers
 
                     if (book == null)
                     {
-                        errorMessages.Add($"Book with ID {bookRequest.BookId} does not exist.");
-                        continue;
-                    }
-
-                    if (bookRequest.QtyNeeded != 1)
-                    {
-                        errorMessages.Add($"You can only borrow 1 copy of '{book.BookName}'. Requested quantity: {bookRequest.QtyNeeded}");
-                        continue;
+                        await borrowingBook.RollbackAsync();
+                        return BadRequest(new
+                        {
+                            Message = $"Book with ID {bookRequest.BookId} does not exist.",
+                        });
                     }
 
                     if (book.NumofBooksAvailable <= 0)
                     {
-                        errorMessages.Add($"Book '{book.BookName}' is currently out of stock.");
-                        continue;
+                        await borrowingBook.RollbackAsync();
+                        return BadRequest(new
+                        {
+                            Message = $"Book '{book.BookName}' is currently out of stock.",
+                        });
                     }
 
+                    if (bookRequest.QtyNeeded != 1)
+                    {
+                        await borrowingBook.RollbackAsync();
+                        return BadRequest(new
+                        {
+                            Message = $"You can only borrow 1 copy of '{book.BookName}'. Requested quantity: {bookRequest.QtyNeeded}",
+                        });
+                    }
+
+                    // Check if user already has this specific book borrowed
                     var existingBorrow = await _context.BorrowingRecords
                         .Include(br => br.BorrowedBooks)
                         .Where(br => br.AppUserId == appUser.Id && !br.IsReturned && !br.IsCancelled)
@@ -140,26 +172,14 @@ namespace ModernLibrary.Controllers
 
                     if (existingBorrow != null)
                     {
-                        errorMessages.Add($"You already have an active borrow record for '{book.BookName}'. " +
-                                        "Please return or cancel the existing borrow record before borrowing it again.");
+                        await borrowingBook.RollbackAsync();
+                        return BadRequest(new
+                        {
+                            Message = $"You already have an active borrow record for '{book.BookName}'. " +
+                                     "Please return or cancel the existing borrow record before borrowing it again."
+                        });
                     }
-                }
 
-                if (errorMessages.Any())
-                {
-                    await borrowingBook.RollbackAsync();
-                    return BadRequest(new
-                    {
-                        Message = "Some books could not be borrowed. Please review the errors below.",
-                        Errors = errorMessages
-                    });
-                }
-
-                foreach (var bookRequest in recordDto.Books)
-                {
-                    var book = await _bookRepo.GetByIdAsync(bookRequest.BookId);
-
-                    book.NumofBooksAvailable -= 1;
                     var bookDto = new UpdateBookRequestDto
                     {
                         NumofBooksAvailable = book.NumofBooksAvailable,
@@ -176,6 +196,8 @@ namespace ModernLibrary.Controllers
                         QtyNeeded = 1,
                     };
                     borrowedBooks.Add(borrowedBook);
+
+                    book.NumofBooksAvailable -= 1;
                 }
 
                 var recordModel = new BorrowingRecord
@@ -190,12 +212,12 @@ namespace ModernLibrary.Controllers
 
                 return Ok(new
                 {
-                    Message = $"You have successfully borrowed {borrowedBooks.Count} book(s)",
                     BorrowedBooks = borrowedBooks.Select(b => new {
                         BookName = b.BookName,
                         BookId = b.BookId
                     }).ToList(),
-                    DueDate = recordModel.DueDate
+                    DueDate = recordModel.DueDate,
+                    RemainingBorrowLimit =$"You have {remainingBorrowLimit - recordDto.Books.Count} book(s) left to borrow. Return to borrow again"
                 });
             }
             catch (Exception ex)
@@ -206,7 +228,7 @@ namespace ModernLibrary.Controllers
         }
 
         [HttpPut("returnBookBorrowed")]
-        [Authorize(Roles = "Customer, SuperAdmin, Admin")]
+        [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> ReturnBookBorrowed(int Id)
         {
             if (!ModelState.IsValid)
@@ -263,7 +285,7 @@ namespace ModernLibrary.Controllers
         }
 
         [HttpPut("cancelBorrowRequest")]
-        [Authorize(Roles = "Customer, SuperAdmin, Admin")]
+        [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> CancelBorrowRequest(int Id)
         {
             if (!ModelState.IsValid)
@@ -310,7 +332,7 @@ namespace ModernLibrary.Controllers
 
 
         [HttpGet("overdueRecords")]
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> GetOverdueRecords()
         {
             var overdueRecords = await _borrowingRecordRepo.CheckAndUpdateOverdueRecordsAsync();

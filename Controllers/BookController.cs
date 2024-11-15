@@ -19,12 +19,9 @@ namespace ModernLibrary.Controllers
         }
         
         [HttpGet("getAllBooks")]
-        [Authorize(Roles = "Customer, SuperAdmin, Admin")]
-        public async Task<IActionResult> GetAllBooks([FromQuery] QueryObject query)
+        [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
+        public async Task<IActionResult> GetAllBooks([FromQuery] BookQueryObject query)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             var books = await _bookRepo.GetAllAsync(query);
 
             var bookDto = books.Select(b => b.ToBookDto()).ToList();
@@ -33,12 +30,9 @@ namespace ModernLibrary.Controllers
         }
 
         [HttpGet("{id:int}")]
-        [Authorize(Roles = "Customer, SuperAdmin, Admin")]
+        [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             var book = await _bookRepo.GetByIdAsync(id);
 
             if (book == null)
@@ -50,13 +44,22 @@ namespace ModernLibrary.Controllers
         }
 
         [HttpPost("addBook")]
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> Create([FromBody] CreateBookRequestDto bookDto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            var book = await _bookRepo.GetByNameAsync(bookDto.BookName);
+
+            if (book != null)
+            {
+                return BadRequest("This book already exists");
+            }
+
             var bookModel = bookDto.ToBookFromCreateDto();
+
+            bookModel.CreatedOn = DateTime.Now;
 
             await _bookRepo.CreateAsync(bookModel);
 
@@ -65,7 +68,7 @@ namespace ModernLibrary.Controllers
 
         [HttpPut]
         [Route("{id:int}")]
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateBookRequestDto updateDto)
         {
             if (!ModelState.IsValid)
@@ -75,7 +78,7 @@ namespace ModernLibrary.Controllers
 
             if (bookModel == null)
             {
-                return NotFound();
+                return NotFound("Book does not exist");
             }
 
             return Ok(bookModel.ToBookDto());
@@ -83,7 +86,7 @@ namespace ModernLibrary.Controllers
 
         [HttpDelete]
         [Route("{id:int}")]
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             if (!ModelState.IsValid)

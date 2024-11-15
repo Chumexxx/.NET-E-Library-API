@@ -2,7 +2,7 @@
 
 namespace ModernLibrary.DTOs.Account
 {
-    public class SuperAdminRegisterDto
+    public class StaffRegisterDto
     {
         [Required]
         public string UserName { get; set; } = string.Empty;

@@ -20,25 +20,19 @@ namespace ModernLibrary.Controllers
         }
 
         [HttpGet("getAllAuthors")]
-        [Authorize(Roles = "Customer, SuperAdmin, Admin")]
+        [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<ActionResult> GetAllAuthors()
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var author = await _authorRepo.GetAllAsync();
-            var authorDto = author.Select(a => a.ToAuthorDto());
+            var authors = await _authorRepo.GetAllAsync();
+            var authorDto = authors.Select(a => a.ToAuthorDto());
 
             return Ok(authorDto);
         }
 
         [HttpGet("{id:int}")]
-        [Authorize(Roles = "Customer, SuperAdmin, Admin")]
+        [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<ActionResult> GetById([FromRoute] int id)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             var author = await _authorRepo.GetByIdAsync(id);
 
             if (author == null)
@@ -50,18 +44,22 @@ namespace ModernLibrary.Controllers
         }
 
         [HttpPost("addAuthor")]
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> Create([FromBody] CreateAuthorRequestDto authorDto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            var author = await _authorRepo.GetByNameAsync(authorDto.AuthorName);
+
+            if (author != null)
+            {
+                return BadRequest("Author already exists");
+            }
+
             var authorModel = authorDto.ToAuthorFromCreateDto();
 
-            if (authorModel == null)
-            {
-                return NotFound("Author already exists");
-            }
+            authorModel.CreatedOn = DateTime.Now;
 
             await _authorRepo.CreateAsync(authorModel);
 
@@ -70,7 +68,7 @@ namespace ModernLibrary.Controllers
 
         [HttpPut]
         [Route("{id:int}")]
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateAuthorRequestDto updateDto)
         {
             if (!ModelState.IsValid)
@@ -80,7 +78,7 @@ namespace ModernLibrary.Controllers
 
             if (author == null)
             {
-                return NotFound();
+                return NotFound("This id does not exist");
             }
 
             return Ok(author.ToAuthorDto());
@@ -88,7 +86,7 @@ namespace ModernLibrary.Controllers
 
         [HttpDelete]
         [Route("{id:int}")]
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             if (!ModelState.IsValid)

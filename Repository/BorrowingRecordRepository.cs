@@ -57,7 +57,7 @@ namespace ModernLibrary.Repository
             return recordModel;
         }
 
-        public async Task<IEnumerable<BorrowingRecord>> GetAllBorrowingRecordAsync()
+        public async Task<List<BorrowingRecord>> GetAllBorrowingRecordAsync()
         {
             return await _context.BorrowingRecords.Include(o => o.AppUser).Include(o => o.BorrowedBooks).ToListAsync();
         }

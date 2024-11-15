@@ -33,22 +33,8 @@ namespace ModernLibrary.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var Username = customerRegisterDto.UserName;
-                var FirstName = customerRegisterDto.FirstName;
-                var LastName = customerRegisterDto.LastName;
-                var email = customerRegisterDto.Email;
-                var PhoneNumber = customerRegisterDto.PhoneNumber;
-                var DateOfBirth = customerRegisterDto.DateOfBirth;
-                var HomeAddress = customerRegisterDto.HomeAddress;
-                var Password = customerRegisterDto.Password;
-                var PasswordConfirmation = customerRegisterDto.PasswordComfirmation;
-
-
-                var user = await _userManager.FindByEmailAsync(email);
-                if (user != null) return BadRequest("Email is alraedy being used by another user");
-
-                if (customerRegisterDto.Password != customerRegisterDto.PasswordComfirmation) return BadRequest("Your password comfirmation did not match the inputed password. Try again!");
-
+                var user = await _userManager.FindByEmailAsync(customerRegisterDto.Email);
+                if (user != null) return BadRequest("Email is already being used.");
 
                 var appUser = new AppUser
                 {
@@ -93,6 +79,60 @@ namespace ModernLibrary.Controllers
             }
         }
 
+        [HttpPost("registerStaff")]
+        public async Task<IActionResult> StaffRegister([FromBody] StaffRegisterDto staffRegisterDto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
+
+                var user = await _userManager.FindByEmailAsync(staffRegisterDto.Email);
+                if (user != null) return BadRequest("Email is already being used.");
+
+                var appUser = new AppUser
+                {
+                    UserName = staffRegisterDto.UserName,
+                    FirstName = staffRegisterDto.FirstName,
+                    LastName = staffRegisterDto.LastName,
+                    Email = staffRegisterDto.Email,
+                    DateOfBirth = staffRegisterDto.DateOfBirth,
+                    HomeAddress = staffRegisterDto.HomeAddress,
+                    PhoneNumber = staffRegisterDto.PhoneNumber,
+                };
+
+                var createdUser = await _userManager.CreateAsync(appUser, staffRegisterDto.Password);
+
+                if (createdUser.Succeeded)
+                {
+                    var roleResult = await _userManager.AddToRoleAsync(appUser, "Staff");
+
+                    if (roleResult.Succeeded)
+                    {
+                        return Ok(
+                            new SignedInDto
+                            {
+                                UserName = appUser.UserName,
+                                Email = appUser.Email,
+                            }
+                        );
+                    }
+                    else
+                    {
+                        return StatusCode(500, roleResult.Errors);
+                    }
+                }
+                else
+                {
+                    return StatusCode(500, createdUser.Errors);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex);
+            }
+        }
+
         [HttpPost("registerLibrarian")]
         public async Task<IActionResult> LibrarianRegister([FromBody] LibrarianRegisterDto librarianRegisterDto)
         {
@@ -101,22 +141,8 @@ namespace ModernLibrary.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var username = librarianRegisterDto.UserName;
-                var FirstName = librarianRegisterDto.FirstName;
-                var LastName = librarianRegisterDto.LastName;
-                var email = librarianRegisterDto.Email;
-                var PhoneNumber = librarianRegisterDto.PhoneNumber;
-                var DateOfBirth = librarianRegisterDto.DateOfBirth;
-                var HomeAddress = librarianRegisterDto.HomeAddress;
-                var Password = librarianRegisterDto.Password;
-                var PasswordConfirmation = librarianRegisterDto.PasswordComfirmation;
-
-
-                var user = await _userManager.FindByEmailAsync(email);
-                if (user != null) return BadRequest("Email is alraedy being used by another user");
-
-                if (librarianRegisterDto.Password != librarianRegisterDto.PasswordComfirmation) return BadRequest("Your password comfirmation did not match the inputed password. Try again!");
-
+                var user = await _userManager.FindByEmailAsync(librarianRegisterDto.Email);
+                if (user != null) return BadRequest("Email is already being used.");
 
                 var appUser = new AppUser
                 {
@@ -170,20 +196,8 @@ namespace ModernLibrary.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var username = superAdminRegisterDto.UserName;
-                var FirstName = superAdminRegisterDto.FirstName;
-                var LastName = superAdminRegisterDto.LastName;
-                var email = superAdminRegisterDto.Email;
-                var phoneNumber = superAdminRegisterDto.PhoneNumber;
-                var password = superAdminRegisterDto.Password;
-                var passwordConfirmation = superAdminRegisterDto.PasswordComfirmation;
-
-
-                var user = await _userManager.FindByEmailAsync(email);
-                if (user != null) return BadRequest("Email is alraedy being used by another user");
-
-                if (superAdminRegisterDto.Password != superAdminRegisterDto.PasswordComfirmation) return BadRequest("Your password comfirmation did not match the inputed password. Try again!");
-
+                var user = await _userManager.FindByEmailAsync(superAdminRegisterDto.Email);
+                if (user != null) return BadRequest("Email is already being used.");
 
                 var appUser = new AppUser
                 {

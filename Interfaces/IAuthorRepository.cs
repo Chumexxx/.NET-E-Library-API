@@ -7,6 +7,7 @@ namespace ModernLibrary.Interfaces
     {
         Task<List<Author>> GetAllAsync();
         Task<Author?> GetByIdAsync(int id);
+        Task<Author?> GetByNameAsync(string name);
         Task<Author> CreateAsync(Author authorModel);
         Task<Author> UpdateAsync(int id, UpdateAuthorRequestDto authorDto);
         Task<Author?> DeleteAsync(int id);

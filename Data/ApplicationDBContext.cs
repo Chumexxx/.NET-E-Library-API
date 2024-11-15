@@ -40,6 +40,11 @@ namespace ModernLibrary.Data
                 },
                 new IdentityRole
                 {
+                    Name = "Staff",
+                    NormalizedName = "STAFF"
+                },
+                new IdentityRole
+                {
                     Name = "Librarian",
                     NormalizedName = "LIBRARIAN"
                 }

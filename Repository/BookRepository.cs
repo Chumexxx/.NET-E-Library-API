@@ -42,7 +42,7 @@ namespace ModernLibrary.Repository
             return bookModel;
         }
 
-        public async Task<List<Book>> GetAllAsync(QueryObject query)
+        public async Task<List<Book>> GetAllAsync(BookQueryObject query)
         {
             var book = _context.Books.AsQueryable();
 
@@ -84,6 +84,11 @@ namespace ModernLibrary.Repository
         public async Task<Book?> GetByIdAsync(int id)
         {
             return await _context.Books.FirstOrDefaultAsync(i => i.BookId == id);
+        }
+
+        public async Task<Book?> GetByNameAsync(string name)
+        {
+            return await _context.Books.FirstOrDefaultAsync(t => t.BookName == name);
         }
 
         public async Task<Book> UpdateAsync(int id, UpdateBookRequestDto bookDto)
