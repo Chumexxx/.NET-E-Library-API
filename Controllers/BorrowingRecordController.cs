@@ -6,6 +6,7 @@ using ModernLibrary.Data;
 using ModernLibrary.DTOs.Book;
 using ModernLibrary.DTOs.BorrowingRecord;
 using ModernLibrary.Extensions;
+using ModernLibrary.Helpers;
 using ModernLibrary.Interfaces;
 using ModernLibrary.Mappers;
 using ModernLibrary.Models;
@@ -37,9 +38,9 @@ namespace ModernLibrary.Controllers
 
         [HttpGet("getAllBorrowingRecords")]
         [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
-        public async Task<IActionResult> GetAllBorrowingRecords()
+        public async Task<IActionResult> GetAllBorrowingRecords([FromQuery] BorrowingRecordQueryObjects query)
         {
-            var borrowingRecords = await _borrowingRecordRepo.GetAllBorrowingRecordAsync();
+            var borrowingRecords = await _borrowingRecordRepo.GetAllBorrowingRecordAsync(query);
 
             var borrowingRecordDto = borrowingRecords.Select(s => s.ToBorrowingRecordDto());
 
@@ -217,8 +218,10 @@ namespace ModernLibrary.Controllers
                         BookId = b.BookId
                     }).ToList(),
                     DueDate = recordModel.DueDate,
-                    RemainingBorrowLimit =$"You have {remainingBorrowLimit - recordDto.Books.Count} book(s) left to borrow. Return to borrow again"
+                    RemainingBorrowLimit = $"You have {remainingBorrowLimit - recordDto.Books.Count} book(s) left to borrow. Return to borrow again"
+
                 });
+
             }
             catch (Exception ex)
             {
@@ -335,7 +338,7 @@ namespace ModernLibrary.Controllers
         [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> GetOverdueRecords()
         {
-            var overdueRecords = await _borrowingRecordRepo.CheckAndUpdateOverdueRecordsAsync();
+            var overdueRecords = await _borrowingRecordRepo.CheckOverdueRecordsAsync();
             return Ok(overdueRecords.Select(r => new
             {
                 r.BorrowingRecordId,
