@@ -100,6 +100,7 @@ namespace ModernLibrary.Repository
                 return null;
             }
 
+            //existingBook.BookName = bookDto.BookName;
             existingBook.Genre = bookDto.Genre;
             existingBook.PublishDate = bookDto.PublishDate;
             existingBook.Publisher = bookDto.Publisher;

@@ -33,18 +33,17 @@ namespace ModernLibrary.Repository
             return borrowingRecordModel;
         }
 
-        public async Task<List<BorrowingRecord>> CheckOverdueRecordsAsync()
+        public async Task<List<BorrowingRecord>> GetAllOverdueRecordsAsync()
         {
             var currentDate = DateTime.Now;
-            var overdueRecords = await _context.BorrowingRecords
-                .Where(br => !br.IsReturned && !br.IsCancelled && br.DueDate < currentDate)
+            var overdueRecords = await _context.BorrowingRecords.Where(br => !br.IsReturned && !br.IsCancelled && br.DueDate < currentDate)
                 .ToListAsync();
 
-            //foreach (var record in overdueRecords)
-            //{
-            //    record.IsOverdue = true;
-            //    record.OverdueDays = (int)Math.Ceiling((currentDate - record.DueDate).Value.TotalDays);
-            //}
+            foreach (var record in overdueRecords)
+            {
+                record.IsOverdue = true;
+                record.OverdueDays = (int)Math.Ceiling((currentDate - record.DueDate).Value.TotalDays);
+            }
 
             await _context.SaveChangesAsync();
             return overdueRecords;
@@ -58,13 +57,15 @@ namespace ModernLibrary.Repository
             return recordModel;
         }
 
-        public async Task<List<BorrowingRecord>> GetAllBorrowingRecordAsync(BorrowingRecordQueryObjects query)
+        public async Task<List<BorrowingRecord>> GetAllBorrowingRecordAsync(string? userId, BorrowingRecordQueryObjects query)
         {
-            //return await _context.BorrowingRecords.Include(o => o.AppUser).Include(o => o.BorrowedBooks).ToListAsync();
-            //var book = _context.Books.AsQueryable();
-            var borrowingRecords = _context.BorrowingRecords.Include(br => br.BorrowedBooks).Include(br => br.AppUser).AsQueryable();
+            var borrowingRecords =  _context.BorrowingRecords.Include(br => br.BorrowedBooks).Include(br => br.AppUser).AsQueryable();
 
-            // Filter by Borrowed Date range
+            if (!string.IsNullOrEmpty(userId))
+            {
+                borrowingRecords = borrowingRecords.Where(br => br.AppUserId == userId);
+            }
+
             if (query.StartBorrowDate.HasValue)
             {
                 borrowingRecords = borrowingRecords.Where(br => br.BorrowedDate >= query.StartBorrowDate.Value.Date);
@@ -74,7 +75,6 @@ namespace ModernLibrary.Repository
                 borrowingRecords = borrowingRecords.Where(br => br.BorrowedDate <= query.EndBorrowDate.Value.Date.AddDays(1).AddTicks(-1));
             }
 
-            // Filter by Due Date range
             if (query.StartDueDate.HasValue)
             {
                 borrowingRecords = borrowingRecords.Where(br => br.DueDate >= query.StartDueDate.Value.Date);
@@ -84,7 +84,6 @@ namespace ModernLibrary.Repository
                 borrowingRecords = borrowingRecords.Where(br => br.DueDate <= query.EndDueDate.Value.Date.AddDays(1).AddTicks(-1));
             }
 
-            // Filter by Return Date range
             if (query.StartReturnDate.HasValue)
             {
                 borrowingRecords = borrowingRecords.Where(br => br.ReturnDate >= query.StartReturnDate.Value.Date);
@@ -94,7 +93,6 @@ namespace ModernLibrary.Repository
                 borrowingRecords = borrowingRecords.Where(br => br.ReturnDate <= query.EndReturnDate.Value.Date.AddDays(1).AddTicks(-1));
             }
 
-            // Filter by status
             if (query.IsReturned.HasValue)
             {
                 borrowingRecords = borrowingRecords.Where(br => br.IsReturned == query.IsReturned.Value);
@@ -108,7 +106,6 @@ namespace ModernLibrary.Repository
                 borrowingRecords = borrowingRecords.Where(br => br.IsOverdue == query.IsOverdue.Value);
             }
 
-            // Filter by Overdue Days range
             if (query.MinOverdueDays.HasValue)
             {
                 borrowingRecords = borrowingRecords.Where(br => br.OverdueDays >= query.MinOverdueDays.Value);
@@ -118,31 +115,22 @@ namespace ModernLibrary.Repository
                 borrowingRecords = borrowingRecords.Where(br => br.OverdueDays <= query.MaxOverdueDays.Value);
             }
 
-            // Get total count before pagination
-            var totalCount = await borrowingRecords.CountAsync();
+            if (!string.IsNullOrWhiteSpace(query.SortBy))
+            {
+                if (query.SortBy.Equals("OverdueDays", StringComparison.OrdinalIgnoreCase))
+                {
+                    borrowingRecords = query.IsDescending ? borrowingRecords.OrderByDescending(p => p.OverdueDays) : borrowingRecords.OrderBy(p => p.OverdueDays);
+                }
+            }
 
-            // Apply pagination
             var skipNumber = (query.PageNumber - 1) * query.PageSize;
 
-            // Calculate current overdue status
-            var currentDate = DateTime.Now;
-            var records = await borrowingRecords.ToListAsync();
-
             return await borrowingRecords.Skip(skipNumber).Take(query.PageSize).ToListAsync();
+        }
 
-            //foreach (var record in records)
-            //{
-            //    if (!record.IsReturned && !record.IsCancelled && record.DueDate.HasValue)
-            //    {
-            //        record.IsOverdue = currentDate > record.DueDate;
-            //        if (record.IsOverdue)
-            //        {
-            //            record.OverdueDays = (int)(currentDate - record.DueDate.Value).TotalDays;
-            //        }
-            //    }
-            //}
-
-            //return (records, totalCount);
+        public async Task<List<BorrowingRecord>> GetAllUserBorrowingRecordAsync(AppUser user)
+        {
+            return await _context.BorrowingRecords.Include(i => i.BorrowedBooks).Where(o => o.AppUserId == user.Id).ToListAsync();
         }
 
         public async Task<BorrowingRecord?> GetBorrowingRecordById(AppUser appUser, int id)
@@ -150,7 +138,7 @@ namespace ModernLibrary.Repository
             return await _context.BorrowingRecords.Include(i => i.BorrowedBooks).FirstOrDefaultAsync(c => c.AppUserId == appUser.Id && c.BorrowingRecordId == id && !c.IsReturned && !c.IsCancelled);
         }
 
-        public async Task<List<BorrowingRecord>> GetUserBorrowingRecordAsync(AppUser user)
+        public async Task<List<BorrowingRecord>> GetUserPendingBorrowingRecordAsync(AppUser user)
         {
             return await _context.BorrowingRecords.Include(i => i.BorrowedBooks).Where(o => o.AppUserId == user.Id && !o.IsReturned && !o.IsCancelled).ToListAsync();
         }
@@ -178,5 +166,21 @@ namespace ModernLibrary.Repository
             return borrowingRecordModel;
         }
 
+        public async Task<List<BorrowingRecord>> GetAllUserOverdueRecordsAsync(AppUser user)
+        {
+            var currentDate = DateTime.Now;
+            var userOverdueRecords = await _context.BorrowingRecords.Where(br => br.AppUserId == user.Id && !br.IsReturned
+                 && !br.IsCancelled && br.DueDate < currentDate).ToListAsync();
+
+
+            foreach (var record in userOverdueRecords)
+            {
+                record.IsOverdue = true;
+                record.OverdueDays = (int)Math.Ceiling((currentDate - record.DueDate).Value.TotalDays);
+            }
+
+            await _context.SaveChangesAsync();
+            return userOverdueRecords;
+        }
     }
 }

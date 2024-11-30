@@ -94,6 +94,7 @@ builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IBorrowingRecordRepository, BorrowingRecordRepository>();
+builder.Services.AddScoped<IBorrowingRecordService, BorrowingRecordService>();
 builder.Services.AddScoped<IBorrowedBookRepository, BorrowedBookRepository>();
 
 

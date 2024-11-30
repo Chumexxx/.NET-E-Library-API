@@ -133,60 +133,6 @@ namespace ModernLibrary.Controllers
             }
         }
 
-        [HttpPost("registerLibrarian")]
-        public async Task<IActionResult> LibrarianRegister([FromBody] LibrarianRegisterDto librarianRegisterDto)
-        {
-            try
-            {
-                if (!ModelState.IsValid)
-                    return BadRequest(ModelState);
-
-                var user = await _userManager.FindByEmailAsync(librarianRegisterDto.Email);
-                if (user != null) return BadRequest("Email is already being used.");
-
-                var appUser = new AppUser
-                {
-                    UserName = librarianRegisterDto.UserName,
-                    FirstName = librarianRegisterDto.FirstName,
-                    LastName = librarianRegisterDto.LastName,
-                    Email = librarianRegisterDto.Email,
-                    PhoneNumber = librarianRegisterDto.PhoneNumber,
-                    DateOfBirth = librarianRegisterDto.DateOfBirth,
-                    HomeAddress = librarianRegisterDto.HomeAddress,
-                };
-
-                var createdUser = await _userManager.CreateAsync(appUser, librarianRegisterDto.Password);
-
-                if (createdUser.Succeeded)
-                {
-                    var roleResult = await _userManager.AddToRoleAsync(appUser, "Librarian");
-
-                    if (roleResult.Succeeded)
-                    {
-                        return Ok(
-                            new SignedInDto
-                            {
-                                UserName = appUser.UserName,
-                                Email = appUser.Email,
-                            }
-                        );
-                    }
-                    else
-                    {
-                        return StatusCode(500, roleResult.Errors);
-                    }
-                }
-                else
-                {
-                    return StatusCode(500, createdUser.Errors);
-                }
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex);
-            }
-        }
-
 
         [HttpPost("registerSuperAdmin")]
         public async Task<IActionResult> SuperAdminRegister([FromBody] SuperAdminRegisterDto superAdminRegisterDto)

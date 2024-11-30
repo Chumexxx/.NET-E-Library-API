@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ModernLibrary.Data;
 using ModernLibrary.Models;
+using System.Data;
 
 namespace ModernLibrary.Controllers
 {
@@ -24,69 +25,86 @@ namespace ModernLibrary.Controllers
             _roleManager = roleManager;
         }
 
-        [HttpPost("addRoleToExistingUser")]
+        [HttpPost("assignRole")]
         [Authorize(Roles = "SuperAdmin")]
-        public async Task<IActionResult> AddRoleToUser(string UserName, string roleName)
+        public async Task<IActionResult> AssignRole(string userId, string role)
         {
-            if (!await _roleManager.RoleExistsAsync(roleName))
-            {
-                return BadRequest($"Role {roleName} does not exist");
-            }
-
-            var userName = await _userManager.FindByNameAsync(UserName);
-            if (userName == null)
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
             {
                 return NotFound("User not found");
             }
 
-            var result = await _userManager.AddToRoleAsync(userName, roleName);
-            if (result.Succeeded)
+            var isStaff = await _userManager.IsInRoleAsync(user, "Staff");
+            if (!isStaff)
             {
-                return Ok($"Role {roleName} successfully added to user {userName.UserName}");
+                return BadRequest(new
+                {
+                    Message = "Role can only be assigned to Staff members. This user is not a Staff member."
+                });
             }
 
-            return BadRequest("Failed to add role");
+            if (!await _roleManager.RoleExistsAsync(role))
+            {
+                return BadRequest("Role does not exist");
+            }
+
+            var result = await _userManager.AddToRoleAsync(user, role);
+            if (result.Succeeded)
+            {
+                return Ok($"Role {role} assigned to staff member {user.UserName}");
+            }
+
+            return BadRequest("Failed to assign role");
         }
 
-        [HttpPost("removeRoleFromExistingUser")]
+        [HttpPost("removeRole")]
         [Authorize(Roles = "SuperAdmin")]
-        public async Task<IActionResult> RemoveRoleFromUser(string UserName, string roleName)
+        public async Task<IActionResult> RemoveRole(string userId, string role)
         {
-            if (!await _roleManager.RoleExistsAsync(roleName))
+            if (!await _roleManager.RoleExistsAsync(role))
             {
-                return BadRequest($"Role {roleName} does not exist");
+                return BadRequest($"Role {role} does not exist");
             }
 
-            var userName = await _userManager.FindByNameAsync(UserName);
-            if (userName == null)
+            if (role.Equals("Customer", StringComparison.OrdinalIgnoreCase))
+            {
+                return BadRequest(new
+                {
+                    Message = "Cannot remove Customer role as it is a default user role."
+                });
+            }
+
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
             {
                 return NotFound("User not found");
             }
 
-            var result = await _userManager.RemoveFromRoleAsync(userName, roleName);
+            var result = await _userManager.RemoveFromRoleAsync(user, role);
             if (result.Succeeded)
             {
-                return Ok($"Role {roleName} successfully removed from user {userName.UserName}");
+                return Ok($"Role {role} successfully removed from user {user.UserName}");
             }
 
             return BadRequest("Failed to remove role");
         }
 
-        [HttpGet("getRoleOfAUser")]
+        [HttpGet("getUserRole")]
         [Authorize(Roles = "SuperAdmin")]
-        public async Task<IActionResult> GetUserRoles(string UserName)
+        public async Task<IActionResult> GetUserRoles(string userId)
         {
-            var userName = await _userManager.FindByNameAsync(UserName);
-            if (userName == null)
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
             {
                 return NotFound("User not found");
             }
 
-            var roles = await _userManager.GetRolesAsync(userName);
+            var roles = await _userManager.GetRolesAsync(user);
             return Ok(roles);
         }
 
-        [HttpGet("showAllUserRoles")]
+        [HttpGet("showAllRoles")]
         [Authorize(Roles = "SuperAdmin")]
         public IActionResult GetAllRoles()
         {

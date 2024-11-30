@@ -33,22 +33,6 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.AccountController",
-    "Method": "LibrarianRegister",
-    "RelativePath": "api/Account/registerLibrarian",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "librarianRegisterDto",
-        "Type": "ModernLibrary.DTOs.Account.LibrarianRegisterDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ModernLibrary.Controllers.AccountController",
     "Method": "StaffRegister",
     "RelativePath": "api/Account/registerStaff",
     "HttpMethod": "POST",
@@ -374,6 +358,16 @@
         "IsRequired": false
       },
       {
+        "Name": "SortBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsDescending",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
         "Name": "PageNumber",
         "Type": "System.Int32",
         "IsRequired": false
@@ -382,14 +376,49 @@
         "Name": "PageSize",
         "Type": "System.Int32",
         "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "ModernLibrary.Controllers.BorrowingRecordController",
-    "Method": "GetUserBorrowingRecord",
-    "RelativePath": "api/borrowingRecord/getBorrowingRecord",
+    "Method": "GetAllOverdueRecords",
+    "RelativePath": "api/borrowingRecord/getAllOverdueRecords",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModernLibrary.Controllers.BorrowingRecordController",
+    "Method": "GetAllUserBorrowingRecord",
+    "RelativePath": "api/borrowingRecord/getAllUserBorrowingRecord",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModernLibrary.Controllers.BorrowingRecordController",
+    "Method": "GetAllUserOverdueRecords",
+    "RelativePath": "api/borrowingRecord/getAllUserOverdueRecords",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModernLibrary.Controllers.BorrowingRecordController",
+    "Method": "GetUserPendingBorrowingRecord",
+    "RelativePath": "api/borrowingRecord/getUserPendingBorrowingRecord",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -414,16 +443,6 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.BorrowingRecordController",
-    "Method": "GetOverdueRecords",
-    "RelativePath": "api/borrowingRecord/overdueRecords",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ModernLibrary.Controllers.BorrowingRecordController",
     "Method": "ReturnBookBorrowed",
     "RelativePath": "api/borrowingRecord/returnBookBorrowed",
     "HttpMethod": "PUT",
@@ -431,7 +450,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": false
       }
@@ -440,19 +459,19 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.RolesController",
-    "Method": "AddRoleToUser",
-    "RelativePath": "api/Roles/addRoleToExistingUser",
+    "Method": "AssignRole",
+    "RelativePath": "api/Roles/assignRole",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "UserName",
+        "Name": "userId",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "roleName",
+        "Name": "role",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -462,13 +481,13 @@
   {
     "ContainingType": "ModernLibrary.Controllers.RolesController",
     "Method": "GetUserRoles",
-    "RelativePath": "api/Roles/getRoleOfAUser",
+    "RelativePath": "api/Roles/getUserRole",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "UserName",
+        "Name": "userId",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -477,19 +496,19 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.RolesController",
-    "Method": "RemoveRoleFromUser",
-    "RelativePath": "api/Roles/removeRoleFromExistingUser",
+    "Method": "RemoveRole",
+    "RelativePath": "api/Roles/removeRole",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "UserName",
+        "Name": "userId",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "roleName",
+        "Name": "role",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -499,7 +518,7 @@
   {
     "ContainingType": "ModernLibrary.Controllers.RolesController",
     "Method": "GetAllRoles",
-    "RelativePath": "api/Roles/showAllUserRoles",
+    "RelativePath": "api/Roles/showAllRoles",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
