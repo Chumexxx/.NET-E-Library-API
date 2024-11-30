@@ -28,13 +28,13 @@ namespace ModernLibrary.Services
             _context = context;
 
         }
-        public async Task<IEnumerable<BorrowingRecordDto>> GetAllBorrowingRecordsAsync(string? userId, BorrowingRecordQueryObjects query)
+        public async Task<List<BorrowingRecordDto>> GetAllBorrowingRecordsAsync(string? userId, BorrowingRecordQueryObjects query)
         {
             var borrowingRecords = await _borrowingRecordRepo.GetAllBorrowingRecordAsync(userId, query);
             return borrowingRecords.Select(s => s.ToBorrowingRecordDto()).ToList();
         }
 
-        public async Task<IEnumerable<BorrowingRecordDto>> GetAllUserBorrowingRecordsAsync(string username)
+        public async Task<List<BorrowingRecordDto>> GetAllUserBorrowingRecordsAsync(string username)
         {
             var appUser = await _userManager.FindByNameAsync(username);
             if (appUser == null)
@@ -44,7 +44,7 @@ namespace ModernLibrary.Services
             return borrowingRecord.Select(s => s.ToBorrowingRecordDto()).ToList();
         }
 
-        public async Task<IEnumerable<BorrowingRecordDto>> GetUserPendingBorrowingRecordsAsync(string username)
+        public async Task<List<BorrowingRecordDto>> GetUserPendingBorrowingRecordsAsync(string username)
         {
             var appUser = await _userManager.FindByNameAsync(username);
             if (appUser == null)
@@ -325,6 +325,7 @@ namespace ModernLibrary.Services
                 OverdueDays = r.OverdueDays
             });
         }
+
     }
 
 

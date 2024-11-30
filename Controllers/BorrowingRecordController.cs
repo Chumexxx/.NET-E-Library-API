@@ -22,20 +22,18 @@ namespace ModernLibrary.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly IBookRepository _bookRepo;
-        private readonly IBorrowingRecordRepository _borrowingRecordRepo;
         private readonly IBorrowedBookRepository _borrowedBookRepo;
         private readonly IBorrowingRecordService _borrowingRecordService;
         private readonly ApplicationDBContext _context;
 
         public BorrowingRecordController(UserManager<AppUser> userManager, IBookRepository bookRepo, IBorrowedBookRepository borrowedBookRepo,
-            IBorrowingRecordService borrowingRecordService, ApplicationDBContext context, IBorrowingRecordRepository borrowingRecordRepo)
+            IBorrowingRecordService borrowingRecordService, ApplicationDBContext context)
         {
             _userManager = userManager;
             _bookRepo = bookRepo;
             _borrowedBookRepo = borrowedBookRepo;
             _borrowingRecordService = borrowingRecordService;
             _context = context;
-            _borrowingRecordRepo = borrowingRecordRepo;
         }
 
         [HttpGet("getAllBorrowingRecords")]

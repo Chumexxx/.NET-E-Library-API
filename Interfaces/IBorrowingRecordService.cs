@@ -6,9 +6,9 @@ namespace ModernLibrary.Interfaces
 {
     public interface IBorrowingRecordService
     {
-        Task<IEnumerable<BorrowingRecordDto>> GetAllBorrowingRecordsAsync(string? userId, BorrowingRecordQueryObjects query);
-        Task<IEnumerable<BorrowingRecordDto>> GetAllUserBorrowingRecordsAsync(string username);
-        Task<IEnumerable<BorrowingRecordDto>> GetUserPendingBorrowingRecordsAsync(string username);
+        Task<List<BorrowingRecordDto>> GetAllBorrowingRecordsAsync(string? userId, BorrowingRecordQueryObjects query);
+        Task<List<BorrowingRecordDto>> GetAllUserBorrowingRecordsAsync(string username);
+        Task<List<BorrowingRecordDto>> GetUserPendingBorrowingRecordsAsync(string username);
         Task<BorrowingRecordDto?> GetBorrowingRecordByIdAsync(string username, int id);
         Task<Object> MakeBorrowRequestAsync(string username, CreateBorrowingRecordRequestDto recordDto);
         Task<Object> ReturnBookBorrowedAsync(string username,  int id);
