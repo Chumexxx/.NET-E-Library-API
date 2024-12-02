@@ -3,7 +3,7 @@ using ModernLibrary.Data;
 using ModernLibrary.DTOs.Book;
 using ModernLibrary.DTOs.BorrowingRecord;
 using ModernLibrary.Helpers;
-using ModernLibrary.Interfaces;
+using ModernLibrary.Interfaces.Repository;
 using ModernLibrary.Models;
 
 namespace ModernLibrary.Repository

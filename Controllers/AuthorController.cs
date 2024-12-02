@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ModernLibrary.DTOs.Author;
-using ModernLibrary.Interfaces;
+using ModernLibrary.Interfaces.Repository;
+using ModernLibrary.Interfaces.Service;
 using ModernLibrary.Mappers;
+using ModernLibrary.Services;
 
 namespace ModernLibrary.Controllers
 {
@@ -12,10 +14,12 @@ namespace ModernLibrary.Controllers
     public class AuthorController : ControllerBase
     {
         private readonly IAuthorRepository _authorRepo;
+        private readonly IAuthorService _authorService;
         private readonly IBookRepository _bookRepo;
-        public AuthorController(IAuthorRepository authorRepo, IBookRepository bookRepo)
+        public AuthorController(IAuthorRepository authorRepo, IBookRepository bookRepo, IAuthorService authorService)
         {
             _authorRepo = authorRepo;
+            _authorService = authorService;
             _bookRepo = bookRepo;
         }
 
@@ -23,83 +27,93 @@ namespace ModernLibrary.Controllers
         [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<ActionResult> GetAllAuthors()
         {
-            var authors = await _authorRepo.GetAllAsync();
-            var authorDto = authors.Select(a => a.ToAuthorDto());
-
-            return Ok(authorDto);
+            try
+            {
+                var authors = await _authorService.GetAllAuthorsAsync();
+                Console.WriteLine("user called the get all authors endpoint");
+                return Ok(authors);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id:int}")]
         [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
-        public async Task<ActionResult> GetById([FromRoute] int id)
+        public async Task<ActionResult> GetAuthorById([FromRoute] int id)
         {
-            var author = await _authorRepo.GetByIdAsync(id);
-
-            if (author == null)
+            try
             {
-                return NotFound();
+                var author = await _authorService.GetAuthorByIdAsync(id);
+                Console.WriteLine("user called the get author by id endpoint");
+                return Ok(author);
             }
-
-            return Ok(author.ToAuthorDto());
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
-        [HttpPost("addAuthor")]
+        [HttpPost("createAuthor")]
         [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
-        public async Task<IActionResult> Create([FromBody] CreateAuthorRequestDto authorDto)
+        public async Task<IActionResult> CreateAuthor([FromBody] CreateAuthorRequestDto authorDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var author = await _authorRepo.GetByNameAsync(authorDto.AuthorName);
-
-            if (author != null)
+            try
             {
-                return BadRequest("Author already exists");
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
+
+                var createdAuthor = await _authorService.CreateAuthorAsync(authorDto);
+                Console.WriteLine("user called the create author endpoint");
+                return CreatedAtAction(nameof(GetAuthorById), new { id = createdAuthor.AuthorId }, createdAuthor);
             }
-
-            var authorModel = authorDto.ToAuthorFromCreateDto();
-
-            authorModel.CreatedOn = DateTime.Now;
-
-            await _authorRepo.CreateAsync(authorModel);
-
-            return CreatedAtAction(nameof(Create), new { id = authorModel }, authorModel.ToAuthorDto());
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPut]
         [Route("{id:int}")]
         [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
-        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateAuthorRequestDto updateDto)
+        public async Task<IActionResult> UpdateAuthor([FromRoute] int id, [FromBody] UpdateAuthorRequestDto updateDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var author = await _authorRepo.UpdateAsync(id, updateDto);
-
-            if (author == null)
+            try
             {
-                return NotFound("This id does not exist");
-            }
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
 
-            return Ok(author.ToAuthorDto());
+                var updatedAuthor = await _authorService.UpdateAuthorAsync(id, updateDto);
+                Console.WriteLine("user called the update author endpoint");
+                return Ok(updatedAuthor);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpDelete]
         [Route("{id:int}")]
         [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
-        public async Task<IActionResult> Delete([FromRoute] int id)
+        public async Task<IActionResult> DeleteAuthor([FromRoute] int id)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var authorModel = await _authorRepo.DeleteAsync(id);
-
-            if (authorModel == null)
+            try
             {
-                return NotFound("Author does not exist");
+                var deletedAuthor = await _authorService.DeleteAuthorAsync(id);
+                Console.WriteLine("user called the delete author endpoint");
+                return Ok(deletedAuthor);
             }
-
-            return Ok(authorModel);
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

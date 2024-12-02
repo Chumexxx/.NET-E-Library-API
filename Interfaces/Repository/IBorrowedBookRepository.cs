@@ -1,7 +1,7 @@
 ﻿using ModernLibrary.DTOs.BorrowingRecord;
 using ModernLibrary.Models;
 
-namespace ModernLibrary.Interfaces
+namespace ModernLibrary.Interfaces.Repository
 {
     public interface IBorrowedBookRepository
     {

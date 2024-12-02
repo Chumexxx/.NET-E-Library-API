@@ -2,7 +2,7 @@
 using ModernLibrary.Helpers;
 using ModernLibrary.Models;
 
-namespace ModernLibrary.Interfaces
+namespace ModernLibrary.Interfaces.Service
 {
     public interface IBorrowingRecordService
     {
@@ -10,10 +10,10 @@ namespace ModernLibrary.Interfaces
         Task<List<BorrowingRecordDto>> GetAllUserBorrowingRecordsAsync(string username);
         Task<List<BorrowingRecordDto>> GetUserPendingBorrowingRecordsAsync(string username);
         Task<BorrowingRecordDto?> GetBorrowingRecordByIdAsync(string username, int id);
-        Task<Object> MakeBorrowRequestAsync(string username, CreateBorrowingRecordRequestDto recordDto);
-        Task<Object> ReturnBookBorrowedAsync(string username,  int id);
-        Task<Object> CancelBorrowRequestAsync(string username, int id);
-        Task<IEnumerable<Object>> GetAllOverdueRecordsAsync();
-        Task<IEnumerable<Object>> GetAllUserOverdueRecordsAsync(string username);
+        Task<object> MakeBorrowRequestAsync(string username, CreateBorrowingRecordRequestDto recordDto);
+        Task<object> ReturnBookBorrowedAsync(string username, int id);
+        Task<object> CancelBorrowRequestAsync(string username, int id);
+        Task<IEnumerable<object>> GetAllOverdueRecordsAsync();
+        Task<IEnumerable<object>> GetAllUserOverdueRecordsAsync(string username);
     }
 }

@@ -2,7 +2,7 @@
 using ModernLibrary.Helpers;
 using ModernLibrary.Models;
 
-namespace ModernLibrary.Interfaces
+namespace ModernLibrary.Interfaces.Repository
 {
     public interface IBorrowingRecordRepository
     {

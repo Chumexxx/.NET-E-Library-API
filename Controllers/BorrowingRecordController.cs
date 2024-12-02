@@ -7,7 +7,8 @@ using ModernLibrary.DTOs.Book;
 using ModernLibrary.DTOs.BorrowingRecord;
 using ModernLibrary.Extensions;
 using ModernLibrary.Helpers;
-using ModernLibrary.Interfaces;
+using ModernLibrary.Interfaces.Repository;
+using ModernLibrary.Interfaces.Service;
 using ModernLibrary.Mappers;
 using ModernLibrary.Models;
 using ModernLibrary.Services;
@@ -21,7 +22,6 @@ namespace ModernLibrary.Controllers
     public class BorrowingRecordController : ControllerBase
     {
         private readonly UserManager<AppUser> _userManager;
-        private readonly IBookRepository _bookRepo;
         private readonly IBorrowedBookRepository _borrowedBookRepo;
         private readonly IBorrowingRecordService _borrowingRecordService;
         private readonly ApplicationDBContext _context;
@@ -30,7 +30,6 @@ namespace ModernLibrary.Controllers
             IBorrowingRecordService borrowingRecordService, ApplicationDBContext context)
         {
             _userManager = userManager;
-            _bookRepo = bookRepo;
             _borrowedBookRepo = borrowedBookRepo;
             _borrowingRecordService = borrowingRecordService;
             _context = context;
@@ -40,60 +39,74 @@ namespace ModernLibrary.Controllers
         [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> GetAllBorrowingRecords([FromQuery] BorrowingRecordQueryObjects query, [FromQuery] string? userId = null)
         {
-            //var borrowingRecords = await _borrowingRecordRepo.GetAllBorrowingRecordAsync(userId, query);
-
-            //var borrowingRecordDto = borrowingRecords.Select(s => s.ToBorrowingRecordDto());
-
-            //return Ok(borrowingRecordDto);
-            var borrowingRecords = await _borrowingRecordService.GetAllBorrowingRecordsAsync(userId, query);
-
-            return Ok(borrowingRecords);
+            try
+            {
+                var borrowingRecords = await _borrowingRecordService.GetAllBorrowingRecordsAsync(userId, query);
+                Console.WriteLine("user called get all borrowing records endpoint");
+                return Ok(borrowingRecords);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
-
-
 
         [HttpGet("getAllUserBorrowingRecord")]
         [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> GetAllUserBorrowingRecord()
         {
-            var username = User.GetUsername();
+            try
+            {
+                var username = User.GetUsername();
 
-            var borrowingRecords = await _borrowingRecordService.GetAllUserBorrowingRecordsAsync(username);
-            return Ok(borrowingRecords);
+                var borrowingRecords = await _borrowingRecordService.GetAllUserBorrowingRecordsAsync(username);
+                Console.WriteLine("user called get all user borrowing record endpoint");
+                return Ok(borrowingRecords);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
-
 
         [HttpGet("getUserPendingBorrowingRecord")]
         [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> GetUserPendingBorrowingRecord()
         {
-            var username = User.GetUsername();
+            try
+            {
+                var username = User.GetUsername();
 
-            var borrowingRecords = await _borrowingRecordService.GetUserPendingBorrowingRecordsAsync(username);
-            return Ok(borrowingRecords);
+                var borrowingRecords = await _borrowingRecordService.GetUserPendingBorrowingRecordsAsync(username);
+                Console.WriteLine("user called get user pending borrowing record endpoint");
+                return Ok(borrowingRecords);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id:int}")]
         [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> GetBorrowingRecordById([FromRoute] int id)
         {
-            var username = User.GetUsername();
+            try
+            {
+                var username = User.GetUsername();
 
-            //var appUser = await _userManager.FindByNameAsync(username);
-
-            //if (appUser == null)
-            //    return NotFound("User not found");
-
-            //var userBorrowingRecord = await _borrowingRecordRepo.GetBorrowingRecordById(appUser, id);
-
-            //if (userBorrowingRecord == null)
-            //    return NotFound($"No BorrowRequest found for the user with ID {id}");
-
-            //return Ok(userBorrowingRecord.ToBorrowingRecordDto());
-
-            var userBorrowingRecord = await _borrowingRecordService.GetBorrowingRecordByIdAsync(username, id);
-            return Ok(userBorrowingRecord);
-
+                var userBorrowingRecord = await _borrowingRecordService.GetBorrowingRecordByIdAsync(username, id);
+                Console.WriteLine("user called get borrowing record by id endpoint");
+                return Ok(userBorrowingRecord);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
 
@@ -101,31 +114,60 @@ namespace ModernLibrary.Controllers
         [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> MakeBorrowRequest([FromBody] CreateBorrowingRecordRequestDto recordDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
 
-            var username = User.GetUsername();
+                var username = User.GetUsername();
 
-            var borrowBook = await _borrowingRecordService.MakeBorrowRequestAsync(username, recordDto);
-            return Ok(borrowBook);
+                var borrowBook = await _borrowingRecordService.MakeBorrowRequestAsync(username, recordDto);
+                Console.WriteLine("user called make borrow request endpoint");
+                return Ok(borrowBook);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPut("returnBookBorrowed")]
         [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> ReturnBookBorrowed(int id)
         {
-            var username = User.GetUsername();
-            var returnBook = await _borrowingRecordService.ReturnBookBorrowedAsync(username, id);
-            return Ok(returnBook);
+            try
+            {
+                var username = User.GetUsername();
+
+                var returnBook = await _borrowingRecordService.ReturnBookBorrowedAsync(username, id);
+                Console.WriteLine("user called return book endpoint");
+                return Ok(returnBook);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPut("cancelBorrowRequest")]
         [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> CancelBorrowRequest(int Id)
         {
-            var username = User.GetUsername();
-            var cancelBook = await _borrowingRecordService.CancelBorrowRequestAsync(username, Id);
-            return Ok(cancelBook);
+            try
+            {
+                var username = User.GetUsername();
+
+                var cancelBook = await _borrowingRecordService.CancelBorrowRequestAsync(username, Id);
+                Console.WriteLine("user called cancel borrow request endpoint");
+                return Ok(cancelBook);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
 
@@ -133,18 +175,37 @@ namespace ModernLibrary.Controllers
         [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> GetAllOverdueRecords()
         {
-            var overdueRecords = await _borrowingRecordService.GetAllOverdueRecordsAsync();
-            return Ok(overdueRecords);
+            try
+            {
+                var overdueRecords = await _borrowingRecordService.GetAllOverdueRecordsAsync();
+                Console.WriteLine("user called get all overdue records endpoint");
+                return Ok(overdueRecords);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("getAllUserOverdueRecords")]
         [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> GetAllUserOverdueRecords()
         {
-            var username = User.GetUsername();
+            try
+            {
+                var username = User.GetUsername();
 
-            var userOverdueRecords = await _borrowingRecordService.GetAllUserOverdueRecordsAsync(username);
-            return Ok(userOverdueRecords);
+                var userOverdueRecords = await _borrowingRecordService.GetAllUserOverdueRecordsAsync(username);
+                Console.WriteLine("user called get all user overdue records endpoint");
+                return Ok(userOverdueRecords);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
+            
         }
 
     }

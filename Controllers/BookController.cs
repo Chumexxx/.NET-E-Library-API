@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using ModernLibrary.DTOs.Book;
 using ModernLibrary.Helpers;
-using ModernLibrary.Interfaces;
+using ModernLibrary.Interfaces.Service;
 using ModernLibrary.Mappers;
+using ModernLibrary.Models;
+using ModernLibrary.Services;
 
 namespace ModernLibrary.Controllers
 {
@@ -12,94 +14,103 @@ namespace ModernLibrary.Controllers
     [Authorize]
     public class BookController : ControllerBase
     {
-        private readonly IBookRepository _bookRepo;
-        public BookController(IBookRepository bookRepo)
+        private readonly IBookService _bookService;
+        public BookController(IBookService bookService)
         {
-            _bookRepo = bookRepo;
+            _bookService = bookService;
         }
         
         [HttpGet("getAllBooks")]
         [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
         public async Task<IActionResult> GetAllBooks([FromQuery] BookQueryObject query)
         {
-            var books = await _bookRepo.GetAllAsync(query);
-
-            var bookDto = books.Select(b => b.ToBookDto()).ToList();
-
-            return Ok(bookDto);
+            try
+            {
+                var books = await _bookService.GetAllBooksAsync(query);
+                Console.WriteLine("user called get all books endpoint");
+                return Ok(books);
+                
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id:int}")]
         [Authorize(Roles = "Customer, SuperAdmin, Admin, Librarian, Staff")]
-        public async Task<IActionResult> GetById([FromRoute] int id)
+        public async Task<IActionResult> GetBookById([FromRoute] int id)
         {
-            var book = await _bookRepo.GetByIdAsync(id);
-
-            if (book == null)
+            try
             {
-                return NotFound();
+                var book = await _bookService.GetBookByIdAsync(id);
+                Console.WriteLine("user called get book by id endpoint");
+                return Ok(book);
             }
-
-            return Ok(book.ToBookDto());
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpPost("addBook")]
         [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
-        public async Task<IActionResult> Create([FromBody] CreateBookRequestDto bookDto)
+        public async Task<IActionResult> CreateBook([FromBody] CreateBookRequestDto bookDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var book = await _bookRepo.GetByNameAsync(bookDto.BookName);
-
-            if (book != null)
+            try
             {
-                return BadRequest("This book already exists");
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
+
+                var createdBook = await _bookService.CreateBookAsync(bookDto);
+                Console.WriteLine("user called create book endpoint");
+                return CreatedAtAction(nameof(GetBookById), new { id = createdBook.BookId }, createdBook);
             }
-
-            var bookModel = bookDto.ToBookFromCreateDto();
-
-            bookModel.CreatedOn = DateTime.Now;
-
-            await _bookRepo.CreateAsync(bookModel);
-
-            return CreatedAtAction(nameof(Create), new { id = bookModel.BookId }, bookModel.ToBookDto());
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPut]
         [Route("{id:int}")]
         [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
-        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateBookRequestDto updateDto)
+        public async Task<IActionResult> UpdateBook([FromRoute] int id, [FromBody] UpdateBookRequestDto updateDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var bookModel = await _bookRepo.UpdateAsync(id, updateDto);
-
-            if (bookModel == null)
+            try
             {
-                return NotFound("Book does not exist");
-            }
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
 
-            return Ok(bookModel.ToBookDto());
+                var updatedBook = await _bookService.UpdateBookAsync(id, updateDto);
+                Console.WriteLine("user called the update book endpoint");
+                return Ok(updatedBook);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpDelete]
         [Route("{id:int}")]
         [Authorize(Roles = "SuperAdmin, Admin, Librarian, Staff")]
-        public async Task<IActionResult> Delete([FromRoute] int id)
+        public async Task<IActionResult> DeleteBook([FromRoute] int id)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var authorModel = await _bookRepo.DeleteAsync(id);
-
-            if (authorModel == null)
+            try
             {
-                return NotFound("Book does not exist");
+                await _bookService.DeleteBookAsync(id);
+                Console.WriteLine("user called the delete book endpoint");
+                return Ok(new { message = "Book has been deleted successfully" });
             }
-
-            return Ok(new {message = "Book has been deleted successfully"});
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

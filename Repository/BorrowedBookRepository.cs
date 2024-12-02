@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ModernLibrary.Data;
 using ModernLibrary.DTOs.BorrowingRecord;
-using ModernLibrary.Interfaces;
+using ModernLibrary.Interfaces.Repository;
 using ModernLibrary.Models;
 
 namespace ModernLibrary.Repository

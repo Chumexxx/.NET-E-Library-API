@@ -1,6 +1,6 @@
 ﻿using ModernLibrary.Models;
 
-namespace ModernLibrary.Interfaces
+namespace ModernLibrary.Interfaces.Service
 {
     public interface ITokenService
     {

@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using ModernLibrary.Data;
-using ModernLibrary.Interfaces;
+using ModernLibrary.Interfaces.Repository;
+using ModernLibrary.Interfaces.Service;
 using ModernLibrary.Models;
 using ModernLibrary.Repository;
 using ModernLibrary.Services;
@@ -91,11 +92,23 @@ builder.Services.AddControllers().AddNewtonsoftJson(options => {
 });
 
 builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<IBookService, BookService>();
+
+//builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+//builder.Services.AddScoped<IRoleService, RoleService>();
+
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
+builder.Services.AddScoped<IAuthorService, AuthorService>();
+
 builder.Services.AddScoped<ITokenService, TokenService>();
+
 builder.Services.AddScoped<IBorrowingRecordRepository, BorrowingRecordRepository>();
 builder.Services.AddScoped<IBorrowingRecordService, BorrowingRecordService>();
+
 builder.Services.AddScoped<IBorrowedBookRepository, BorrowedBookRepository>();
+
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<IAccountService, AccountService>();
 
 
 var app = builder.Build();

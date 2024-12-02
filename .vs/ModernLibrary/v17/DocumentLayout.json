@@ -3,68 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\services\\borrowingrecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:services\\borrowingrecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\iborrowingrecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\iborrowingrecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\iborrowingrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\iborrowingrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\controllers\\borrowingrecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:controllers\\borrowingrecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\repository\\borrowingrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:repository\\borrowingrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\iborrowedbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\iborrowedbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\repository\\borrowedbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:repository\\borrowedbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\dtos\\borrowedbook\\borrowedbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:dtos\\borrowedbook\\borrowedbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\repository\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:repository\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,8 +23,140 @@
       "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\service\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\service\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\repository\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\repository\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\services\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:services\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\services\\borrowingrecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:services\\borrowingrecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\repository\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:repository\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\repository\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\repository\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\controllers\\borrowingrecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:controllers\\borrowingrecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\service\\iauthorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\service\\iauthorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\service\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\service\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\repository\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\repository\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\service\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\service\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\repository\\borrowedbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:repository\\borrowedbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\repository\\borrowingrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:repository\\borrowingrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\repository\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:repository\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\service\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\service\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\dtos\\role\\roleoperationresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:dtos\\role\\roleoperationresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\dtos\\role\\roleassignmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:dtos\\role\\roleassignmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\repository\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\repository\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\dtos\\account\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:dtos\\account\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\models\\borrowingrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:models\\borrowingrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\service\\iborrowingrecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\service\\iborrowingrecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\repository\\iborrowingrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\repository\\iborrowingrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\interfaces\\repository\\iborrowedbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:interfaces\\repository\\iborrowedbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\dtos\\account\\signedindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:dtos\\account\\signedindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\dtos\\borrowingrecord\\borrowingrecorddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:dtos\\borrowingrecord\\borrowingrecorddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\dtos\\borrowedbook\\borrowedbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:dtos\\borrowedbook\\borrowedbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\helpers\\borrowingrecordqueryobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -89,10 +169,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -109,10 +185,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\modernlibrary.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:modernlibrary.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\models\\borrowingrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:models\\borrowingrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\mappers\\bookmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -147,10 +219,6 @@
       "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:dtos\\account\\newuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\dtos\\account\\signedindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:dtos\\account\\signedindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\dtos\\account\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:dtos\\account\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -165,10 +233,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\models\\borrowedbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:models\\borrowedbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|solutionrelative:models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6829790-E83C-4D43-A7F5-6A845AA63578}|ModernLibrary.csproj|c:\\users\\obasi chukwuemeka\\desktop\\tech\\c#\\modernlibrary\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -210,7 +274,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -218,111 +282,320 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IBorrowingRecordService.cs",
-              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\IBorrowingRecordService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IBorrowingRecordService.cs",
-              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\IBorrowingRecordService.cs*",
-              "RelativeToolTip": "Interfaces\\IBorrowingRecordService.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Service\\ITokenService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Service\\ITokenService.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Service\\ITokenService.cs",
+              "RelativeToolTip": "Interfaces\\Service\\ITokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T09:55:50.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T15:54:34.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "RoleOperationResultDto.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Role\\RoleOperationResultDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Role\\RoleOperationResultDto.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Role\\RoleOperationResultDto.cs",
+              "RelativeToolTip": "DTOs\\Role\\RoleOperationResultDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T15:43:58.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "RoleAssignmentDto.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Role\\RoleAssignmentDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Role\\RoleAssignmentDto.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Role\\RoleAssignmentDto.cs",
+              "RelativeToolTip": "DTOs\\Role\\RoleAssignmentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T15:42:52.045Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "Services\\AccountService.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Services\\AccountService.cs",
+              "RelativeToolTip": "Services\\AccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T14:15:35.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Account\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Account\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Account\\RegisterDto.cs",
+              "RelativeToolTip": "DTOs\\Account\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T14:13:49.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Service\\IAccountService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Service\\IAccountService.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Service\\IAccountService.cs",
+              "RelativeToolTip": "Interfaces\\Service\\IAccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T14:12:04.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Repository\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\AccountRepository.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Repository\\AccountRepository.cs",
+              "RelativeToolTip": "Repository\\AccountRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T14:06:26.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Repository\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Repository\\IAccountRepository.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Repository\\IAccountRepository.cs",
+              "RelativeToolTip": "Interfaces\\Repository\\IAccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T14:05:34.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RoleService.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Services\\RoleService.cs",
+              "RelativeDocumentMoniker": "Services\\RoleService.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Services\\RoleService.cs",
+              "RelativeToolTip": "Services\\RoleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T13:40:07.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IRoleService.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Service\\IRoleService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Service\\IRoleService.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Service\\IRoleService.cs",
+              "RelativeToolTip": "Interfaces\\Service\\IRoleService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T13:39:47.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "RoleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Repository\\RoleRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\RoleRepository.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Repository\\RoleRepository.cs",
+              "RelativeToolTip": "Repository\\RoleRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T13:38:00.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IRoleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Repository\\IRoleRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Repository\\IRoleRepository.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Repository\\IRoleRepository.cs",
+              "RelativeToolTip": "Interfaces\\Repository\\IRoleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T13:36:32.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthorService.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Services\\AuthorService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthorService.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Services\\AuthorService.cs",
+              "RelativeToolTip": "Services\\AuthorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:06:20.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Services\\BookService.cs",
+              "RelativeDocumentMoniker": "Services\\BookService.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Services\\BookService.cs",
+              "RelativeToolTip": "Services\\BookService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:05:45.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IAuthorService.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Service\\IAuthorService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Service\\IAuthorService.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Service\\IAuthorService.cs",
+              "RelativeToolTip": "Interfaces\\Service\\IAuthorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:02:54.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Service\\IBookService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Service\\IBookService.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Service\\IBookService.cs",
+              "RelativeToolTip": "Interfaces\\Service\\IBookService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T11:01:25.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IBorrowingRecordService.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Service\\IBorrowingRecordService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Service\\IBorrowingRecordService.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Service\\IBorrowingRecordService.cs",
+              "RelativeToolTip": "Interfaces\\Service\\IBorrowingRecordService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T09:55:50.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "BorrowingRecordService.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Services\\BorrowingRecordService.cs",
               "RelativeDocumentMoniker": "Services\\BorrowingRecordService.cs",
-              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Services\\BorrowingRecordService.cs*",
-              "RelativeToolTip": "Services\\BorrowingRecordService.cs*",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowBoAAAA0AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Services\\BorrowingRecordService.cs",
+              "RelativeToolTip": "Services\\BorrowingRecordService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwBQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T09:56:14.142Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RoleController.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "Controllers\\RoleController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwFcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T12:40:09.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "IBorrowingRecordRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\IBorrowingRecordRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IBorrowingRecordRepository.cs",
-              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\IBorrowingRecordRepository.cs",
-              "RelativeToolTip": "Interfaces\\IBorrowingRecordRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Repository\\IBorrowingRecordRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Repository\\IBorrowingRecordRepository.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Repository\\IBorrowingRecordRepository.cs",
+              "RelativeToolTip": "Interfaces\\Repository\\IBorrowingRecordRepository.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T02:23:59.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T02:23:59.249Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BorrowingRecordController.cs",
-              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\BorrowingRecordController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BorrowingRecordController.cs",
-              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\BorrowingRecordController.cs*",
-              "RelativeToolTip": "Controllers\\BorrowingRecordController.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T06:49:34.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 22,
               "Title": "BorrowingRecordRepository.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Repository\\BorrowingRecordRepository.cs",
               "RelativeDocumentMoniker": "Repository\\BorrowingRecordRepository.cs",
               "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Repository\\BorrowingRecordRepository.cs",
               "RelativeToolTip": "Repository\\BorrowingRecordRepository.cs",
-              "ViewState": "AgIAAKEAAAAAAAAAAAAuwK4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAYwK4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T02:23:02.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T02:23:02.71Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 34,
               "Title": "IBorrowedBookRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\IBorrowedBookRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IBorrowedBookRepository.cs",
-              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\IBorrowedBookRepository.cs",
-              "RelativeToolTip": "Interfaces\\IBorrowedBookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Repository\\IBorrowedBookRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Repository\\IBorrowedBookRepository.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Repository\\IBorrowedBookRepository.cs",
+              "RelativeToolTip": "Interfaces\\Repository\\IBorrowedBookRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T07:25:14.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T07:25:14.935Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "IBookRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\IBookRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IBookRepository.cs",
-              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\IBookRepository.cs",
-              "RelativeToolTip": "Interfaces\\IBookRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Repository\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Repository\\IBookRepository.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Repository\\IBookRepository.cs",
+              "RelativeToolTip": "Interfaces\\Repository\\IBookRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T01:05:13.534Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 31,
               "Title": "BookRepository.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Repository\\BookRepository.cs",
               "RelativeDocumentMoniker": "Repository\\BookRepository.cs",
               "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Repository\\BookRepository.cs",
               "RelativeToolTip": "Repository\\BookRepository.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAswGcAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T00:54:59.749Z",
+              "WhenOpened": "2024-11-15T00:54:59.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BorrowingRecordController.cs",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\BorrowingRecordController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BorrowingRecordController.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\BorrowingRecordController.cs",
+              "RelativeToolTip": "Controllers\\BorrowingRecordController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAANAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T06:49:34.315Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 21,
               "Title": "BorrowedBookRepository.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Repository\\BorrowedBookRepository.cs",
               "RelativeDocumentMoniker": "Repository\\BorrowedBookRepository.cs",
@@ -330,12 +603,11 @@
               "RelativeToolTip": "Repository\\BorrowedBookRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T16:07:24.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T16:07:24.075Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 38,
               "Title": "BorrowedBookDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\BorrowedBook\\BorrowedBookDto.cs",
               "RelativeDocumentMoniker": "DTOs\\BorrowedBook\\BorrowedBookDto.cs",
@@ -343,128 +615,113 @@
               "RelativeToolTip": "DTOs\\BorrowedBook\\BorrowedBookDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T03:14:00.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T03:14:00.427Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 7,
               "Title": "AuthorController.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\AuthorController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthorController.cs",
               "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\AuthorController.cs",
               "RelativeToolTip": "Controllers\\AuthorController.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAcwDoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwGIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T14:41:52.534Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGAAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAlwGEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T20:17:53.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T20:17:53.739Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 2,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowIUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAqwF4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T15:39:30.214Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RoleController.cs",
-              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "Controllers\\RoleController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAcwFEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T12:40:09.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "IAuthorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\IAuthorRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IAuthorRepository.cs",
-              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\IAuthorRepository.cs",
-              "RelativeToolTip": "Interfaces\\IAuthorRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Repository\\IAuthorRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Repository\\IAuthorRepository.cs",
+              "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Interfaces\\Repository\\IAuthorRepository.cs",
+              "RelativeToolTip": "Interfaces\\Repository\\IAuthorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T03:16:30.176Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "AuthorRepository.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Repository\\AuthorRepository.cs",
               "RelativeDocumentMoniker": "Repository\\AuthorRepository.cs",
               "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Repository\\AuthorRepository.cs",
               "RelativeToolTip": "Repository\\AuthorRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T03:17:24.825Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "BookController.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "Controllers\\BookController.cs",
               "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Controllers\\BookController.cs",
               "RelativeToolTip": "Controllers\\BookController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAcwFIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAF4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T20:30:51.114Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 4,
               "Title": "ApplicationDBContext.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Data\\ApplicationDBContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDBContext.cs",
               "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Data\\ApplicationDBContext.cs",
               "RelativeToolTip": "Data\\ApplicationDBContext.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAcwC4AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAA0wC4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T03:12:58.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 37,
               "Title": "BorrowingRecordDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\BorrowingRecord\\BorrowingRecordDto.cs",
               "RelativeDocumentMoniker": "DTOs\\BorrowingRecord\\BorrowingRecordDto.cs",
               "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\BorrowingRecord\\BorrowingRecordDto.cs",
               "RelativeToolTip": "DTOs\\BorrowingRecord\\BorrowingRecordDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T03:14:08.277Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 39,
               "Title": "BorrowingRecordQueryObjects.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Helpers\\BorrowingRecordQueryObjects.cs",
               "RelativeDocumentMoniker": "Helpers\\BorrowingRecordQueryObjects.cs",
@@ -476,7 +733,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 40,
               "Title": "CustomerRegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Account\\CustomerRegisterDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Account\\CustomerRegisterDto.cs",
@@ -488,7 +745,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 41,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -500,19 +757,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "TokenService.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "Services\\TokenService.cs",
               "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Services\\TokenService.cs",
               "RelativeToolTip": "Services\\TokenService.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAWwBcAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T16:32:28.891Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 42,
               "Title": "AppUser.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Models\\AppUser.cs",
               "RelativeDocumentMoniker": "Models\\AppUser.cs",
@@ -524,7 +781,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "BorrowingRecord.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Models\\BorrowingRecord.cs",
               "RelativeDocumentMoniker": "Models\\BorrowingRecord.cs",
@@ -536,7 +793,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 46,
               "Title": "BookMapper.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Mappers\\BookMapper.cs",
               "RelativeDocumentMoniker": "Mappers\\BookMapper.cs",
@@ -548,7 +805,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 43,
               "Title": "BorrowingRecordMapper.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Mappers\\BorrowingRecordMapper.cs",
               "RelativeDocumentMoniker": "Mappers\\BorrowingRecordMapper.cs",
@@ -560,7 +817,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 45,
               "Title": "ModernLibrary.http",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\ModernLibrary.http",
               "RelativeDocumentMoniker": "ModernLibrary.http",
@@ -572,7 +829,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 44,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -584,7 +841,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 47,
               "Title": "BorrowedBookMapper.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Mappers\\BorrowedBookMapper.cs",
               "RelativeDocumentMoniker": "Mappers\\BorrowedBookMapper.cs",
@@ -596,7 +853,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 48,
               "Title": "BookQueryObject.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Helpers\\BookQueryObject.cs",
               "RelativeDocumentMoniker": "Helpers\\BookQueryObject.cs",
@@ -608,7 +865,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 50,
               "Title": "CreateBookRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Book\\CreateBookRequestDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Book\\CreateBookRequestDto.cs",
@@ -620,7 +877,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 51,
               "Title": "BookDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Book\\BookDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Book\\BookDto.cs",
@@ -632,7 +889,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 52,
               "Title": "AuthorDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Author\\AuthorDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Author\\AuthorDto.cs",
@@ -644,7 +901,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 54,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Account\\LoginDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Account\\LoginDto.cs",
@@ -656,7 +913,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 49,
               "Title": "UpdateBookRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Book\\UpdateBookRequestDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Book\\UpdateBookRequestDto.cs",
@@ -668,7 +925,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 53,
               "Title": "NewUserDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Account\\NewUserDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Account\\NewUserDto.cs",
@@ -680,19 +937,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 35,
               "Title": "SignedInDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Account\\SignedInDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Account\\SignedInDto.cs",
               "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Account\\SignedInDto.cs",
               "RelativeToolTip": "DTOs\\Account\\SignedInDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T00:43:57.713Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 55,
               "Title": "SuperAdminRegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Account\\SuperAdminRegisterDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Account\\SuperAdminRegisterDto.cs",
@@ -704,7 +961,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 56,
               "Title": "StaffRegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Account\\StaffRegisterDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Account\\StaffRegisterDto.cs",
@@ -716,7 +973,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 58,
               "Title": "Author.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Models\\Author.cs",
               "RelativeDocumentMoniker": "Models\\Author.cs",
@@ -728,7 +985,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 57,
               "Title": "BorrowedBook.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Models\\BorrowedBook.cs",
               "RelativeDocumentMoniker": "Models\\BorrowedBook.cs",
@@ -740,19 +997,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 36,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Models\\Book.cs",
               "RelativeDocumentMoniker": "Models\\Book.cs",
               "ToolTip": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Models\\Book.cs",
               "RelativeToolTip": "Models\\Book.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T03:11:03.102Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 65,
               "Title": "20241114123232_AddStaffToSeedRoleMigration.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\Migrations\\20241114123232_AddStaffToSeedRoleMigration.cs",
               "RelativeDocumentMoniker": "Migrations\\20241114123232_AddStaffToSeedRoleMigration.cs",
@@ -764,7 +1021,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 59,
               "Title": "UpdateAuthorRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Author\\UpdateAuthorRequestDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Author\\UpdateAuthorRequestDto.cs",
@@ -776,7 +1033,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 60,
               "Title": "BorrowingRecordList.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Book\\BorrowingRecordList.cs",
               "RelativeDocumentMoniker": "DTOs\\Book\\BorrowingRecordList.cs",
@@ -788,7 +1045,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 61,
               "Title": "UpdateBorrowingRecordRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\BorrowingRecord\\UpdateBorrowingRecordRequestDto.cs",
               "RelativeDocumentMoniker": "DTOs\\BorrowingRecord\\UpdateBorrowingRecordRequestDto.cs",
@@ -800,7 +1057,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 62,
               "Title": "ReturnBorrowingRecordRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\BorrowingRecord\\ReturnBorrowingRecordRequestDto.cs",
               "RelativeDocumentMoniker": "DTOs\\BorrowingRecord\\ReturnBorrowingRecordRequestDto.cs",
@@ -812,7 +1069,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 63,
               "Title": "CreateBorrowingRecordRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\BorrowingRecord\\CreateBorrowingRecordRequestDto.cs",
               "RelativeDocumentMoniker": "DTOs\\BorrowingRecord\\CreateBorrowingRecordRequestDto.cs",
@@ -824,7 +1081,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 64,
               "Title": "CreateAuthorRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Obasi Chukwuemeka\\Desktop\\Tech\\C#\\ModernLibrary\\DTOs\\Author\\CreateAuthorRequestDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Author\\CreateAuthorRequestDto.cs",

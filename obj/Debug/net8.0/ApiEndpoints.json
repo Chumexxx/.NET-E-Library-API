@@ -65,7 +65,7 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.AuthorController",
-    "Method": "GetById",
+    "Method": "GetAuthorById",
     "RelativePath": "api/Authors/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -81,7 +81,7 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.AuthorController",
-    "Method": "Update",
+    "Method": "UpdateAuthor",
     "RelativePath": "api/Authors/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -102,7 +102,7 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.AuthorController",
-    "Method": "Delete",
+    "Method": "DeleteAuthor",
     "RelativePath": "api/Authors/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -118,8 +118,8 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.AuthorController",
-    "Method": "Create",
-    "RelativePath": "api/Authors/addAuthor",
+    "Method": "CreateAuthor",
+    "RelativePath": "api/Authors/createAuthor",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -144,7 +144,7 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.BookController",
-    "Method": "GetById",
+    "Method": "GetBookById",
     "RelativePath": "api/Books/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -160,7 +160,7 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.BookController",
-    "Method": "Update",
+    "Method": "UpdateBook",
     "RelativePath": "api/Books/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -181,7 +181,7 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.BookController",
-    "Method": "Delete",
+    "Method": "DeleteBook",
     "RelativePath": "api/Books/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -197,7 +197,7 @@
   },
   {
     "ContainingType": "ModernLibrary.Controllers.BookController",
-    "Method": "Create",
+    "Method": "CreateBook",
     "RelativePath": "api/Books/addBook",
     "HttpMethod": "POST",
     "IsController": true,

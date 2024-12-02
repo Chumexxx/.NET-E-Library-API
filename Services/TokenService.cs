@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
-using ModernLibrary.Interfaces;
+using ModernLibrary.Interfaces.Service;
 using ModernLibrary.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;

@@ -2,7 +2,7 @@
 using ModernLibrary.Data;
 using ModernLibrary.DTOs.Book;
 using ModernLibrary.Helpers;
-using ModernLibrary.Interfaces;
+using ModernLibrary.Interfaces.Repository;
 using ModernLibrary.Models;
 
 namespace ModernLibrary.Repository
@@ -20,7 +20,7 @@ namespace ModernLibrary.Repository
             return _context.Books.AnyAsync(b => b.BookId == id);
         }
 
-        public async Task<Book> CreateAsync(Book bookModel)
+        public async Task<Book> CreateBookAsync(Book bookModel)
         {
             await _context.Books.AddAsync(bookModel);
             await _context.SaveChangesAsync();
@@ -28,7 +28,7 @@ namespace ModernLibrary.Repository
         }
 
 
-        public async Task<Book?> DeleteAsync(int id)
+        public async Task<Book?> DeleteBookAsync(int id)
         {
             var bookModel = await _context.Books.FirstOrDefaultAsync(b => b.BookId == id);
 
@@ -42,7 +42,7 @@ namespace ModernLibrary.Repository
             return bookModel;
         }
 
-        public async Task<List<Book>> GetAllAsync(BookQueryObject query)
+        public async Task<List<Book>> GetAllBooksAsync(BookQueryObject query)
         {
             var book = _context.Books.AsQueryable();
 
@@ -81,17 +81,17 @@ namespace ModernLibrary.Repository
         }
 
 
-        public async Task<Book?> GetByIdAsync(int id)
+        public async Task<Book?> GetByBookIdAsync(int id)
         {
             return await _context.Books.FirstOrDefaultAsync(i => i.BookId == id);
         }
 
-        public async Task<Book?> GetByNameAsync(string name)
+        public async Task<Book?> GetByBookNameAsync(string name)
         {
             return await _context.Books.FirstOrDefaultAsync(t => t.BookName == name);
         }
 
-        public async Task<Book> UpdateAsync(int id, UpdateBookRequestDto bookDto)
+        public async Task<Book> UpdateBookAsync(int id, UpdateBookRequestDto bookDto)
         {
             var existingBook = await _context.Books.FirstOrDefaultAsync(b => b.BookId == id);
 

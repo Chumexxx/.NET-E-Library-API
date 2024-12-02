@@ -5,7 +5,8 @@ using ModernLibrary.DTOs.Book;
 using ModernLibrary.DTOs.BorrowedBook;
 using ModernLibrary.DTOs.BorrowingRecord;
 using ModernLibrary.Helpers;
-using ModernLibrary.Interfaces;
+using ModernLibrary.Interfaces.Repository;
+using ModernLibrary.Interfaces.Service;
 using ModernLibrary.Mappers;
 using ModernLibrary.Models;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
@@ -112,7 +113,7 @@ namespace ModernLibrary.Services
             {
                 foreach (var bookRequest in recordDto.Books)
                 {
-                    var book = await _bookRepo.GetByIdAsync(bookRequest.BookId);
+                    var book = await _bookRepo.GetByBookIdAsync(bookRequest.BookId);
 
                     if (book == null)
                     {
@@ -164,7 +165,7 @@ namespace ModernLibrary.Services
                         Publisher = book.Publisher,
                         PublishDate = book.PublishDate,
                     };
-                    await _bookRepo.UpdateAsync(book.BookId, bookDto);
+                    await _bookRepo.UpdateBookAsync(book.BookId, bookDto);
 
                     var borrowedBook = new BorrowedBook
                     {
@@ -228,7 +229,7 @@ namespace ModernLibrary.Services
 
             foreach (var borrowedBooks in borrowingRecord.BorrowedBooks)
             {
-                var book = await _bookRepo.GetByIdAsync(borrowedBooks.BookId);
+                var book = await _bookRepo.GetByBookIdAsync(borrowedBooks.BookId);
 
                 if (book == null)
                     return($"Book with ID {borrowedBooks.BookId} not found");
@@ -243,7 +244,7 @@ namespace ModernLibrary.Services
                     Synopsis = book.Synopsis,
                 };
 
-                await _bookRepo.UpdateAsync(book.BookId, bookDto);
+                await _bookRepo.UpdateBookAsync(book.BookId, bookDto);
             }
 
             var returnMessage = borrowingRecord.IsOverdue
@@ -277,7 +278,7 @@ namespace ModernLibrary.Services
 
             foreach (var borrowedBook in borrowingRecord.BorrowedBooks)
             {
-                var book = await _bookRepo.GetByIdAsync(borrowedBook.BookId);
+                var book = await _bookRepo.GetByBookIdAsync(borrowedBook.BookId);
 
                 if (book == null)
                     return($"Book with ID {borrowedBook.BookId} not found");
@@ -292,7 +293,7 @@ namespace ModernLibrary.Services
                     Synopsis = book.Synopsis,
                 };
 
-                await _bookRepo.UpdateAsync(book.BookId, bookDto);
+                await _bookRepo.UpdateBookAsync(book.BookId, bookDto);
             }
 
             return (new { message = "BorrowRequest was successfully cancelled" });
