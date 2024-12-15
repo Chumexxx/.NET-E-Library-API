@@ -5,6 +5,7 @@ using ModernLibrary.Interfaces.Repository;
 using ModernLibrary.Interfaces.Service;
 using ModernLibrary.Mappers;
 using ModernLibrary.Models;
+using ModernLibrary.Repository;
 
 namespace ModernLibrary.Services
 {
@@ -44,12 +45,17 @@ namespace ModernLibrary.Services
             return authors.Select(a => a.ToAuthorDto());
         }
 
-        public async Task<AuthorDto> GetAuthorByIdAsync(int id)
+        public async Task<List<Author>> GetAuthorByIdAsync(IEnumerable<int> authorId)
         {
-            var author = await _authorRepo.GetByAuthorIdAsync(id);
-            if (author == null)
-                throw new Exception("Author not found");
-            return author.ToAuthorDto();
+            if (authorId == null || !authorId.Any())
+                throw new ArgumentException("Author IDs cannot be null or empty");
+
+            var authors = await _authorRepo.GetByAuthorIdAsync(authorId);
+
+            if (!authors.Any())
+                throw new Exception("No authors found for the provided IDs");
+
+            return authors;
         }
 
         public async Task<AuthorDto> UpdateAuthorAsync(int id, UpdateAuthorRequestDto updateDto)

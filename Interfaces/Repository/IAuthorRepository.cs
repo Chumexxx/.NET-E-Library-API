@@ -6,7 +6,7 @@ namespace ModernLibrary.Interfaces.Repository
     public interface IAuthorRepository
     {
         Task<List<Author>> GetAllAuthorsAsync();
-        Task<Author?> GetByAuthorIdAsync(int id);
+        Task<List<Author>> GetByAuthorIdAsync(IEnumerable<int> authorId);
         Task<Author?> GetByAuthorNameAsync(string name);
         Task<Author> CreateAuthorAsync(Author authorModel);
         Task<Author> UpdateAuthorAsync(int id, UpdateAuthorRequestDto authorDto);

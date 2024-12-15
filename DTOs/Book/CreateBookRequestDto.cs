@@ -10,10 +10,7 @@ namespace ModernLibrary.DTOs.Book
         [Required]
         [MaxLength(25, ErrorMessage = "Genre Name must not be more than 25 characters")]
         public string Genre { get; set; } = string.Empty;
-        [Required]
-        public int AuthorId { get; set; }
-        [Required]
-        public string AuthorName { get; set; } = string.Empty;
+        public List<int> AuthorId { get; set; }
         [Required]
         public DateTime? PublishDate { get; set; } = DateTime.Now;
         [Required]

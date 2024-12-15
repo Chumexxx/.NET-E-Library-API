@@ -47,9 +47,9 @@ namespace ModernLibrary.Repository
             return await _context.Author.Include(c => c.Books).ToListAsync();
         }
 
-        public async Task<Author?> GetByAuthorIdAsync(int id)
+        public async Task<List<Author>> GetByAuthorIdAsync(IEnumerable<int> authorId)
         {
-            return await _context.Author.Include(c => c.Books).FirstOrDefaultAsync(a => a.AuthorId == id);
+            return await _context.Author.Where(a => authorId.Contains(a.AuthorId)).ToListAsync();
         }
 
         public async Task<Author?> GetByAuthorNameAsync(string name)

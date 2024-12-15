@@ -47,7 +47,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in get all borrowing records endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -66,7 +66,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in get all user borrowing record endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -85,7 +85,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in user pending borrowing record endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -104,7 +104,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in get borrowing record by id endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -127,7 +127,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in makee borrow request endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -146,7 +146,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in return borrowed book endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -165,7 +165,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in cancel borrow request endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -183,7 +183,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in get all overdue records endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -202,7 +202,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in get user overdue records endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
             

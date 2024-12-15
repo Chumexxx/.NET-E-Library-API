@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ModernLibrary.Models;
+using System.Reflection.Emit;
 
 namespace ModernLibrary.Data
 {
@@ -20,6 +21,14 @@ namespace ModernLibrary.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            builder.Entity<Author>()
+            .HasMany(a => a.Books)
+            .WithMany(b => b.Authors)
+            .UsingEntity<Dictionary<string, object>>(
+                "AuthorBook",
+                ab => ab.HasOne<Book>().WithMany().HasForeignKey("BookId"),
+                ab => ab.HasOne<Author>().WithMany().HasForeignKey("AuthorId"));
 
             List<IdentityRole> roles = new List<IdentityRole>
             {

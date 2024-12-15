@@ -29,10 +29,11 @@ namespace ModernLibrary.Controllers
                     return BadRequest(ModelState);
 
                 var result = await _accountService.RegisterCustomerAsync(customerRegisterDto);
+                Console.WriteLine("user hit the customer register endpoint");
                 return Ok(result);
             }
             catch (Exception ex) {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in customerRegister endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -46,11 +47,12 @@ namespace ModernLibrary.Controllers
                     return BadRequest(ModelState);
 
                 var result = await _accountService.RegisterStaffAsync(staffRegisterDto);
+                Console.WriteLine("user hit the staff register endpoint");
                 return Ok(result);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in staffRegister endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -64,11 +66,12 @@ namespace ModernLibrary.Controllers
                     return BadRequest(ModelState);
 
                 var result = await _accountService.RegisterSuperAdminAsync(superAdminRegisterDto);
+                Console.WriteLine("user hit the super admin register endpoint");
                 return Ok(result);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in superAdminRegister endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -82,11 +85,12 @@ namespace ModernLibrary.Controllers
                     return BadRequest(ModelState);
 
                 var result = await _accountService.LoginAsync(loginDto);
+                Console.WriteLine("user hit the login endpoint");
                 return Ok(result);
             }
             catch (Exception ex) 
             { 
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in login endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
 

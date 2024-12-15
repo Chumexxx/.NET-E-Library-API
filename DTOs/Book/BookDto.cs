@@ -1,4 +1,6 @@
-﻿namespace ModernLibrary.DTOs.Book
+﻿using ModernLibrary.DTOs.Author;
+
+namespace ModernLibrary.DTOs.Book
 {
     public class BookDto
     {
@@ -7,10 +9,9 @@
         public DateTime CreatedOn { get; set; } = DateTime.Now;
         public string Synopsis { get; set; } = string.Empty;
         public string Genre { get; set; } = string.Empty;
-        public int AuthorId { get; set; }
-        public string AuthorName { get; set; } = string.Empty;
         public string Publisher { get; set; } = string.Empty;
         public DateTime? PublishDate { get; set; } = DateTime.Now;
         public int NumofBooksAvailable { get; set; }
+        public List<AuthorDto> Authors { get; set; }
     }
 }

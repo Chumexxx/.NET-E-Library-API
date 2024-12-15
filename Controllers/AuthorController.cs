@@ -35,7 +35,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in getAllAuthors endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -46,13 +46,17 @@ namespace ModernLibrary.Controllers
         {
             try
             {
-                var author = await _authorService.GetAuthorByIdAsync(id);
-                Console.WriteLine("user called the get author by id endpoint");
-                return Ok(author);
+                var authors = await _authorService.GetAuthorByIdAsync(new[] { id });
+
+                if (!authors.Any())
+                    return NotFound("Author not found.");
+
+                Console.WriteLine("User called the get author by ID endpoint.");
+                return Ok(authors.FirstOrDefault());
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in get author by ID endpoint: ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -72,7 +76,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in create author endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -93,7 +97,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in update author endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -111,7 +115,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in delete author endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }

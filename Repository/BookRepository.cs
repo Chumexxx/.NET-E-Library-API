@@ -49,7 +49,7 @@ namespace ModernLibrary.Repository
 
             if (!string.IsNullOrWhiteSpace(query.AuthorName))
             {
-                book = book.Where(s => s.AuthorName.Contains(query.AuthorName));
+                book = book.Where(b => b.Authors.Any(a => a.AuthorName.Contains(query.AuthorName)));
             }
 
             if (!string.IsNullOrWhiteSpace(query.Genre))

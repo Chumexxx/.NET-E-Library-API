@@ -32,7 +32,7 @@ namespace ModernLibrary.Controllers
                 
             } catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in get all books endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -49,7 +49,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in get books by id endpoint ", ex.Message);
                 return NotFound(ex.Message);
             }
         }
@@ -69,7 +69,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in create book endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -90,7 +90,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in update book endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -108,7 +108,7 @@ namespace ModernLibrary.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error in delete book endpoint ", ex.Message);
                 return BadRequest(ex.Message);
             }
         }
